@@ -1,0 +1,68 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "main": ".open-next/worker.js",
+  "name": "examples-hono",
+  "compatibility_date": "2025-08-10",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "minify": true,
+  "observability": {
+    "enabled": true
+  },
+  /**
+   * Placement
+   *
+   * @see https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
+   */
+  /**
+   * Bindings
+   *
+   * @see https://developers.cloudflare.com/workers/runtime-apis/bindings/
+   */
+  "kv_namespaces": [
+    {
+      "binding": "Families",
+      "id": "2676152f3a5240c499cfe251eb0e0cb4"
+    },
+    {
+      "binding": "Albums",
+      "id": "bd836841490144899afbebe20318c16e"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "Pictures",
+      "bucket_name": "pictures"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "Database",
+      "database_name": "preview",
+      "database_id": "a304a33f-9ec2-4ebf-8c9c-290f1cb8749f",
+      "migrations_dir": "database/migrations"
+    }
+  ]
+  /**
+   * Environment Variables
+   *
+   * @see https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
+   * @see https://developers.cloudflare.com/workers/configuration/secrets/
+   */
+  /**
+   * Static Assets
+   *
+   * @see https://developers.cloudflare.com/workers/static-assets/binding/
+   */
+  /**
+   * Service Bindings
+   *
+   * @see https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
+   */
+}
