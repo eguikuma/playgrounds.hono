@@ -1,0 +1,74 @@
+/* 文字サイズ小 */
+[data-size="Small"] {
+  --size-scale: 0.85;
+}
+
+/* 文字サイズ中 */
+[data-size="Normal"] {
+  --size-scale: 1;
+}
+
+/* 文字サイズ大 */
+[data-size="Large"] {
+  --size-scale: 1.2;
+}
+
+/* ライトモード */
+[data-theme="Light"] {
+  --color-foundation: #f5e9d9;
+  --color-brand: #8a3822;
+  --color-accent: #3d4aa2;
+  --color-foreground: #fdf8f3;
+  --color-primary: #372218;
+  --color-secondary: #5c4632;
+  --color-success: #3c5e00;
+  --color-error: #a81c00;
+  --color-focus: #e28d70;
+  --color-outline: #e5d2ba;
+  --color-track: #37221814;
+}
+
+/* ダークモード */
+[data-theme="Dark"] {
+  --color-foundation: #211e1b;
+  --color-brand: #8d381b;
+  --color-accent: #4349a7;
+  --color-foreground: #f8f5f0;
+  --color-primary: #f5edd8;
+  --color-secondary: #d5c6a9;
+  --color-success: #355a00;
+  --color-error: #9e230b;
+  --color-focus: #f5b799;
+  --color-outline: #3d3630;
+  --color-track: #f5edd81e;
+}
+
+/* ライトモード + 高コントラスト */
+[data-theme="Light"][data-contrast="High"] {
+  --color-foundation: #f0f0f0;
+  --color-brand: #96371c;
+  --color-accent: #3b4da0;
+  --color-foreground: #ffffff;
+  --color-primary: #000000;
+  --color-secondary: #333333;
+  --color-success: #3e6300;
+  --color-error: #b30000;
+  --color-focus: #c25b3a;
+  --color-outline: #cccccc;
+  --color-track: #00000026;
+}
+
+/* ダークモード + 高コントラスト */
+[data-theme="Dark"][data-contrast="High"] {
+  --color-foundation: #1a1a1a;
+  --color-brand: #963511;
+  --color-accent: #464ca0;
+  --color-foreground: #ffffff;
+  --color-primary: #ffffff;
+  --color-secondary: #e0e0e0;
+  --color-success: #316200;
+  --color-error: #a02a1b;
+  --color-focus: #ffbfaa;
+  --color-outline: #4d4d4d;
+  --color-track: #ffffff33;
+}
